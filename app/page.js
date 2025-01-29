@@ -1,12 +1,12 @@
 import { Button } from "../components/ui/button";
-import { Divide } from "lucide-react";
-import Image from "next/image";
+import { Divide, Link } from "lucide-react";
 
 export default function Home() {
   return (
     <div>
-      <h2>hello ai world</h2>
-      <Button>Send</Button>
+      <Link href="./dashboard">
+        <Button>Let's Start</Button>
+      </Link>
     </div>
   );
 }
