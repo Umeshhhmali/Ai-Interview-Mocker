@@ -1,12 +1,19 @@
+"use client"
+
+import { useRouter } from "next/navigation";
 import { Button } from "../components/ui/button";
-import { Divide, Link } from "lucide-react";
 
 export default function Home() {
+
+  const router=useRouter();
+  const onDashboard =()=>{
+    router.push('/dashboard')
+  }
   return (
-    <div>
-      <Link href="./dashboard">
-        <Button>Let's Start</Button>
-      </Link>
+    <div className="flex h-screen justify-center items-center">
+      <div>
+        <Button onClick={onDashboard}>Let's Start</Button>
+      </div>
     </div>
   );
 }
